@@ -69,9 +69,11 @@ Skills from Anthropic's official repository. These follow Anthropic's best pract
 | Skill | Description | Source |
 |-------|-------------|--------|
 | **docx** | Word document creation, editing, and analysis | [Anthropic Official](https://github.com/anthropics/skills) |
-| **xlsx** | Excel spreadsheet creation with formulas and formatting | [Anthropic Official](https://github.com/anthropics/skills) |
+| **xlsx** | Excel spreadsheet creation with formulas and formatting | [Anthropic Official](https://github.com/anthropics/skills) + ThepExcel |
 | **pptx** | PowerPoint presentation creation and editing | [Anthropic Official](https://github.com/anthropics/skills) |
 | **pdf** | PDF text extraction and form filling | [Anthropic Official](https://github.com/anthropics/skills) |
+
+> **Note:** xlsx enhanced by ThepExcel with Power Query routing to `/power-query-coaching`.
 
 ---
 

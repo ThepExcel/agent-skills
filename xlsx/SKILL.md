@@ -287,3 +287,18 @@ The script returns JSON with error details:
 - Add comments to cells with complex formulas or important assumptions
 - Document data sources for hardcoded values
 - Include notes for key calculations and model sections
+
+## Power Query
+
+Power Query (data transformation in Excel UI) is **not supported** by Python libraries like pandas or openpyxl.
+
+If user mentions Power Query, Get & Transform, M code, or data cleaning/reshaping tasks that require Excel UI:
+
+→ Use `/power-query-coaching` — provides step-by-step UI guidance for transforming messy data into clean, analysis-ready formats.
+
+Common Power Query tasks (handled by power-query-coaching):
+- Wide format → Long format (Unpivot)
+- Multi-row headers → Single-row headers
+- Blank/merged cells → Fill Down
+- Grouped data → Explicit hierarchy
+- Combine multiple files → Single table
