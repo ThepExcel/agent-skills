@@ -29,6 +29,7 @@ Skills developed by [ThepExcel](https://www.thepexcel.com) in collaboration with
 | **triz** | TRIZ (Theory of Inventive Problem Solving) with 40 principles and contradiction matrix |
 | **concept-explainer** | Master teaching methodology for explaining concepts with visualizations |
 | **visualization** | Data visualization, diagrams, and Manim animations |
+| **ai-image-video-prompt** | Professional AI image/video prompt engineering with visual artist's eye |
 | **skill-creator** | Guide for creating new Claude Code skills |
 | **business-management** | Business management frameworks hub (SWOT, OKR, Porter's, BCG, etc.) |
 | **business-model** | Business Model Canvas, Lean Canvas, Value Proposition Canvas |
@@ -58,6 +59,7 @@ You can also invoke skills directly by describing what you need:
 - "Create a Lean Canvas for my startup idea" → uses business-model
 - "Help me create a skill from my expertise" → uses skill-extractor
 - "Coach me on fixing this messy Excel data" → uses power-query-coach
+- "Create an image prompt for product photography" → uses ai-image-video-prompt
 - "Create a PowerPoint presentation" → uses pptx
 
 ## Structure

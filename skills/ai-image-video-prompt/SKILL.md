@@ -31,9 +31,77 @@ Create professional-quality AI visuals with an artist's eye.
 
 ## Mode 1: Generate
 
-### Workflow: VISUALIZE → COMPOSE → PROMPT
+### Workflow: RESEARCH → VISUALIZE → COMPOSE → PROMPT
 
-### Step 1: VISUALIZE (What's the final image?)
+### Step 0: RESEARCH (Know your subject first)
+
+**ถ้าไม่รู้จัก subject/brand/concept → ต้อง search ก่อน!**
+
+Before creating any prompt, ask yourself:
+- Do I know this brand's visual identity? (logo, colors, style)
+- Do I understand this concept/product? (what it looks like, key features)
+- Are there existing visual references I should match?
+
+**Examples that require research:**
+| Request | What to Search |
+|---------|----------------|
+| "สร้างภาพ Claude Skills" | Claude brand colors (#da7756), Skills icon (🧩), SKILL.md visual |
+| "ภาพสำหรับ ThepExcel" | ThepExcel logo, brand colors, existing style |
+| "Midjourney style image" | Midjourney's typical aesthetic, common outputs |
+| "Apple product shot" | Apple's photography style, lighting, backgrounds |
+
+**How to research:**
+1. Use `WebSearch` to find brand guidelines, visual identity
+2. Look for official logos, color codes, design systems
+3. Find example images that represent the brand/concept
+4. Ask user if they have specific references
+
+**IMPORTANT:** Don't guess visual identity. Wrong colors or misrepresented brands look unprofessional.
+
+---
+
+### Step 1: ASK PROMPT FORMAT
+
+**ถาม user ว่าต้องการ prompt แบบไหน:**
+
+```
+"พี่ระต้องการ prompt แบบไหนคะ?
+1. Natural Language - บรรยายเป็นประโยค เหมาะกับงาน creative, exploration
+2. JSON Structured - แยกเป็น field ชัดเจน เหมาะกับงาน production, batch, ต้องการความแม่นยำ"
+```
+
+| Format | Best For | Pros | Cons |
+|--------|----------|------|------|
+| **Natural Language** | Creative exploration, emotional scenes, one-off images | Flexible, nuanced, evocative | Less consistent, harder to reproduce |
+| **JSON Structured** | Production work, batch generation, precise control | Repeatable, consistent, machine-friendly | Less creative freedom, rigid |
+
+**JSON Prompt Example:**
+```json
+{
+  "subject": "Professional woman, 30s, confident smile",
+  "setting": "Modern office with large windows",
+  "lighting": "Soft natural light from left, subtle rim light",
+  "composition": "Rule of thirds, subject on right",
+  "camera": "85mm f/1.8, shallow depth of field",
+  "style": "Corporate editorial, warm tones",
+  "mood": "Professional yet approachable"
+}
+```
+
+**Natural Language Equivalent:**
+```
+Professional woman in her 30s with a confident smile, standing in a modern
+office with large windows. Soft natural light streams from the left with
+subtle rim lighting. Composed using rule of thirds with subject on the right.
+Shot with 85mm f/1.8 for shallow depth of field. Corporate editorial style
+with warm tones. Professional yet approachable mood.
+```
+
+**Default:** If user doesn't specify, use Natural Language for creative work, JSON for production/batch.
+
+---
+
+### Step 2: VISUALIZE (What's the final image?)
 
 Before writing any prompt, answer:
 
@@ -44,7 +112,7 @@ Before writing any prompt, answer:
 4. PURPOSE: Where will this be used?
 ```
 
-### Step 2: COMPOSE (Apply visual fundamentals)
+### Step 3: COMPOSE (Apply visual fundamentals)
 
 | Element | Quick Decision | Reference |
 |---------|----------------|-----------|
@@ -56,7 +124,7 @@ Before writing any prompt, answer:
 
 **For thumbnails/social media:** See [graphic-design.md](references/graphic-design.md)
 
-### Step 3: PROMPT (Model-specific syntax)
+### Step 4: PROMPT (Model-specific syntax)
 
 | Model | Best For | Guide |
 |-------|----------|-------|
@@ -225,6 +293,7 @@ When user shows an image and wants to improve it:
 | Camera Movement, Shot Types | [cinematography.md](references/cinematography.md) |
 | Art Movements, Film Stocks | [styles-glossary.md](references/styles-glossary.md) |
 | Thumbnails, Social Media | [graphic-design.md](references/graphic-design.md) |
+| JSON vs Natural Language Prompts | [prompt-formats.md](references/prompt-formats.md) |
 
 ---
 
