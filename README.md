@@ -49,18 +49,18 @@ Skills developed by [ThepExcel](https://www.thepexcel.com) in collaboration with
 
 | Skill | Description |
 |-------|-------------|
-| **deep-research** | Comprehensive 8-phase research with Graph-of-Thoughts, source triangulation, and claim verification |
-| **generate-creative-ideas** | Creative thinking techniques and ideation frameworks |
-| **problem-solving** | Structured problem-solving methodologies (5 Whys, Fishbone, Root Cause Analysis) |
-| **triz** | TRIZ (Theory of Inventive Problem Solving) with 40 principles and contradiction matrix |
-| **explain-concepts** | Master teaching methodology for explaining concepts with visualizations |
-| **create-visualization** | Data visualization, diagrams, and Manim animations |
-| **prompt-ai-image-video** | Professional AI image/video prompt engineering with visual artist's eye |
-| **skill-creator** | Guide for creating new Claude Code skills |
-| **manage-business-strategy** | Business management frameworks hub (SWOT, OKR, Porter's, BCG, etc.) |
-| **design-business-model** | Business Model Canvas, Lean Canvas, Value Proposition Canvas |
-| **extract-expertise** | Extract domain expertise from experts and transform into Claude skills |
-| **power-query-coaching** | Coach users to transform messy data using Power Query UI |
+| [**create-visualization**](create-visualization/) | Data visualization, diagrams, and Manim animations |
+| [**deep-research**](deep-research/) | Comprehensive 8-phase research with Graph-of-Thoughts, source triangulation, and claim verification |
+| [**design-business-model**](design-business-model/) | Business Model Canvas, Lean Canvas, Value Proposition Canvas |
+| [**explain-concepts**](explain-concepts/) | Master teaching methodology for explaining concepts with visualizations |
+| [**extract-expertise**](extract-expertise/) | Extract domain expertise from experts and transform into Claude skills |
+| [**generate-creative-ideas**](generate-creative-ideas/) | Creative thinking techniques and ideation frameworks |
+| [**manage-business-strategy**](manage-business-strategy/) | Business management frameworks hub (SWOT, OKR, Porter's, BCG, etc.) |
+| [**power-query-coaching**](power-query-coaching/) | Coach users to transform messy data using Power Query UI |
+| [**problem-solving**](problem-solving/) | Structured problem-solving methodologies (5 Whys, Fishbone, Root Cause Analysis) |
+| [**prompt-ai-image-video**](prompt-ai-image-video/) | Professional AI image/video prompt engineering with visual artist's eye |
+| [**skill-creator**](skill-creator/) | Guide for creating new Claude Code skills |
+| [**triz**](triz/) | TRIZ (Theory of Inventive Problem Solving) with 40 principles and contradiction matrix |
 
 ### Anthropic Official Skills (Pre-optimized)
 
@@ -68,10 +68,10 @@ Skills from Anthropic's official repository. These follow Anthropic's best pract
 
 | Skill | Description | Source |
 |-------|-------------|--------|
-| **docx** | Word document creation, editing, and analysis | [Anthropic Official](https://github.com/anthropics/skills) |
-| **xlsx** | Excel spreadsheet creation with formulas and formatting | [Anthropic Official](https://github.com/anthropics/skills) + ThepExcel |
-| **pptx** | PowerPoint presentation creation and editing | [Anthropic Official](https://github.com/anthropics/skills) |
-| **pdf** | PDF text extraction and form filling | [Anthropic Official](https://github.com/anthropics/skills) |
+| [**docx**](docx/) | Word document creation, editing, and analysis | [Anthropic Official](https://github.com/anthropics/skills) |
+| [**pdf**](pdf/) | PDF text extraction and form filling | [Anthropic Official](https://github.com/anthropics/skills) |
+| [**pptx**](pptx/) | PowerPoint presentation creation and editing | [Anthropic Official](https://github.com/anthropics/skills) |
+| [**xlsx**](xlsx/) | Excel spreadsheet creation with formulas and formatting | [Anthropic Official](https://github.com/anthropics/skills) + ThepExcel |
 
 > **Note:** xlsx enhanced by ThepExcel with Power Query routing to `/power-query-coaching`.
 
@@ -83,18 +83,19 @@ Once installed, invoke skills directly with `/skill-name` for guaranteed activat
 
 | Command | What It Does |
 |---------|--------------|
+| `/create-visualization` | Data visualization, diagrams, Manim animations |
 | `/deep-research` | Comprehensive 8-phase research with source verification |
-| `/generate-creative-ideas` | Creative thinking and ideation techniques |
-| `/explain-concepts` | Master teaching methodology with visualizations |
-| `/manage-business-strategy` | SWOT, OKR, Porter's Five Forces, BCG Matrix |
 | `/design-business-model` | Business Model Canvas, Lean Canvas |
+| `/docx` `/pdf` `/pptx` `/xlsx` | Office document operations |
+| `/explain-concepts` | Master teaching methodology with visualizations |
 | `/extract-expertise` | Transform domain expertise into Claude skills |
+| `/generate-creative-ideas` | Creative thinking and ideation techniques |
+| `/manage-business-strategy` | SWOT, OKR, Porter's Five Forces, BCG Matrix |
 | `/power-query-coaching` | Step-by-step Power Query UI guidance |
-| `/prompt-ai-image-video` | Professional AI image/video prompts |
 | `/problem-solving` | 5 Whys, Fishbone, Root Cause Analysis |
-| `/triz` | 40 TRIZ principles and contradiction matrix |
+| `/prompt-ai-image-video` | Professional AI image/video prompts |
 | `/skill-creator` | Guide for creating new skills |
-| `/docx` `/xlsx` `/pptx` `/pdf` | Office document operations |
+| `/triz` | 40 TRIZ principles and contradiction matrix |
 
 ---
 
