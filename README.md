@@ -79,17 +79,22 @@ Skills from Anthropic's official repository. These follow Anthropic's best pract
 
 ## Usage Examples
 
-Once installed, just describe what you need:
+Once installed, invoke skills directly with `/skill-name` for guaranteed activation:
 
-- "Research the latest AI developments" → uses **deep-research**
-- "Help me think creatively about this problem" → uses **generate-creative-ideas**
-- "Explain how recursion works" → uses **explain-concepts**
-- "Analyze SWOT for my business" → uses **manage-business-strategy**
-- "Create a Lean Canvas for my startup idea" → uses **design-business-model**
-- "Help me create a skill from my expertise" → uses **extract-expertise**
-- "Coach me on fixing this messy Excel data" → uses **power-query-coaching**
-- "Create an image prompt for product photography" → uses **prompt-ai-image-video**
-- "Create a PowerPoint presentation" → uses **pptx**
+| Command | What It Does |
+|---------|--------------|
+| `/deep-research` | Comprehensive 8-phase research with source verification |
+| `/generate-creative-ideas` | Creative thinking and ideation techniques |
+| `/explain-concepts` | Master teaching methodology with visualizations |
+| `/manage-business-strategy` | SWOT, OKR, Porter's Five Forces, BCG Matrix |
+| `/design-business-model` | Business Model Canvas, Lean Canvas |
+| `/extract-expertise` | Transform domain expertise into Claude skills |
+| `/power-query-coaching` | Step-by-step Power Query UI guidance |
+| `/prompt-ai-image-video` | Professional AI image/video prompts |
+| `/problem-solving` | 5 Whys, Fishbone, Root Cause Analysis |
+| `/triz` | 40 TRIZ principles and contradiction matrix |
+| `/skill-creator` | Guide for creating new skills |
+| `/docx` `/xlsx` `/pptx` `/pdf` | Office document operations |
 
 ---
 
