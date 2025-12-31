@@ -1,6 +1,6 @@
 ---
-name: business-model
-description: "Business model design and validation using Business Model Canvas, Lean Canvas, and Value Proposition Canvas. Use when designing new business models, validating startup ideas, achieving product-market fit, or innovating existing business models."
+name: design-business-model
+description: Business model design and validation using Business Model Canvas, Lean Canvas, and Value Proposition Canvas. Use when designing new business models, validating startup ideas, achieving product-market fit, or innovating existing business models.
 ---
 
 # Business Model Frameworks

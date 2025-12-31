@@ -1,6 +1,6 @@
 ---
-name: power-query-coach
-description: Coach users to transform messy data into clean, analysis-ready formats using Power Query UI. Diagnoses data problems, visualizes goals, and guides step-by-step transformations for office workers who know basic Power Query.
+name: power-query-coaching
+description: Coaches users to transform messy data into clean, analysis-ready formats using Power Query UI. Diagnoses data problems, visualizes goals, and guides step-by-step transformations.
 ---
 
 # Power Query Coach

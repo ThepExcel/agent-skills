@@ -1,7 +1,6 @@
 ---
-name: ai-image-video-prompt
-description: |
-  Professional AI image/video prompt engineering with visual artist's eye. Creates prompts that produce stunning, professional-quality visuals by understanding composition, color theory, lighting, cinematography, and model-specific techniques. Use when: (1) User wants to generate AI images/videos, (2) "create image of...", "generate video...", (3) Needs help with prompts for Nano Banana Pro, Qwen Image, Z-Image Turbo, Wan 2.2, Sora2, or similar models, (4) Wants to improve visual quality of AI outputs.
+name: prompt-ai-image-video
+description: Creates professional AI image/video prompts with artist's eye for composition, color, lighting, and cinematography. Use when generating AI images/videos, improving prompt quality, or working with models like Nano Banana Pro, Qwen, Sora2, Wan 2.2.
 ---
 
 # AI Image & Video Prompt Engineering

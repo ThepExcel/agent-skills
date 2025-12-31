@@ -1,7 +1,6 @@
 ---
-name: creativity
-description: |
-  Creative problem-solving and ideation. Use when user needs to: (1) Generate ideas/solutions, (2) Break creative blocks, (3) Think differently, (4) Brainstorm alternatives, (5) Innovate. Triggers: "creative", "ideas", "brainstorm", "stuck", "alternatives", "innovative", "ไอเดีย", "ความคิดสร้างสรรค์", "คิดนอกกรอบ"
+name: generate-creative-ideas
+description: Creative problem-solving and ideation using SCAMPER, First Principles, Random Word, and AI-optimized techniques. Use when generating ideas, breaking creative blocks, brainstorming alternatives, or innovating.
 ---
 
 # Creativity Skill

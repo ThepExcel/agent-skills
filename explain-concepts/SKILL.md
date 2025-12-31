@@ -1,7 +1,6 @@
 ---
-name: concept-explainer
-description: |
-  Explain difficult concepts using master teaching methodologies (Feynman, Buddha's Upaya, Socratic, Cognitive Load, Dual Coding). Use when: (1) User asks to explain a concept, (2) "I don't understand X", (3) ELI5 requests, (4) "what is X", "how does X work".
+name: explain-concepts
+description: Explains difficult concepts using master teaching methodologies (Feynman, Socratic, Cognitive Load, Dual Coding). Use when user asks to explain a concept, "I don't understand X", ELI5 requests, "what is X", "how does X work".
 ---
 
 # Concept Explainer

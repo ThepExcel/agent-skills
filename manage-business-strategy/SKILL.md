@@ -1,6 +1,6 @@
 ---
-name: business-management
-description: "Business management frameworks hub for strategic analysis, decision making, goal setting, growth strategy, and organizational change. Use when analyzing business situations, making strategic decisions, setting goals, planning growth, or managing organizational change."
+name: manage-business-strategy
+description: Business management frameworks for strategic analysis, decision making, goal setting, growth strategy, and organizational change. Use when analyzing business situations or making strategic decisions.
 ---
 
 # Business Management Frameworks

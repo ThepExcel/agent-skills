@@ -1,12 +1,6 @@
 ---
-name: visualization
-description: |
-  Create diagrams and animations for STEM education and concept explanation. Use when user asks to:
-  (1) Draw physics diagrams: Free Body Diagrams (FBD), force vectors, inclined planes, pulleys
-  (2) Create math visualizations: function plots, geometry, unit circle, coordinate systems
-  (3) Generate flowcharts: process flows, decision trees, algorithms
-  (4) Make animations: 3Blue1Brown-style Manim animations for physics/math concepts
-  Trigger phrases: "draw FBD", "visualize forces", "plot function", "create flowchart", "animate", "show vector addition"
+name: create-visualization
+description: Creates diagrams and animations for STEM education using Matplotlib and Manim. Use for physics diagrams (FBD, vectors), math plots (functions, geometry), flowcharts, or 3Blue1Brown-style animations.
 ---
 
 # Visualization Skill

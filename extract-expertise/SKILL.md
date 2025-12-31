@@ -1,6 +1,6 @@
 ---
-name: skill-extractor
-description: Extract expertise from domain experts and transform it into working Claude skills. Guides users through structured conversations to capture mental models, workflows, principles, and best practices, then generates comprehensive SKILL.md files with references and examples.
+name: extract-expertise
+description: Extracts expertise from domain experts and transforms it into working Claude skills. Guides through structured conversations to capture mental models, workflows, principles, and best practices.
 ---
 
 # Skill Extractor
