@@ -2,6 +2,7 @@
 
 ## Contents
 - [Phase 0: CLASSIFY](#phase-0-classify)
+- [Phase 0.5: DISCOVERY](#phase-05-discovery)
 - [Phase 1: SCOPE](#phase-1-scope)
 - [Phase 1.5: HYPOTHESIZE](#phase-15-hypothesize)
 - [Phase 2: PLAN](#phase-2-plan)
@@ -29,6 +30,97 @@
 | **D: INVESTIGATION** | Novel/conflicting | Full pipeline + Red Team. 45-60 min. |
 
 **Gate**: Classification explicit before proceeding.
+
+---
+
+## Phase 0.5: LANDSCAPE SCAN
+
+**Objective:** Map the full landscape BEFORE diving into specifics. Discover what exists.
+
+**Rationale:** You cannot research what you don't know exists. Claude's training data has a cutoff. For fast-changing fields (AI, crypto, tech), new entities exist that Claude doesn't know about. Scanning the landscape FIRST prevents blind spots.
+
+### CRITICAL RULE: No Known Names in Scan Queries
+
+```
+❌ WRONG: "DeepSeek Qwen performance comparison 2025"
+   → You're only searching things you already know!
+
+✅ RIGHT: "China open source LLM models list 2025"
+   → You're discovering what's out there
+```
+
+### When to Apply
+**ALL research types** — MANDATORY before SCOPE:
+
+| Type | Scan Intensity |
+|------|----------------|
+| A (Lookup) | 1 landscape search |
+| B (Synthesis) | 2 landscape searches |
+| C (Analysis) | 2-3 landscape searches |
+| D (Investigation) | 3-4 landscape searches + full entity extraction |
+
+### Process
+
+1. **Landscape Search** (parallel, NO known entity names, use current year):
+   ```
+   WebSearch: "[topic] landscape overview [current year]"
+   WebSearch: "top [topic] list [current year]"
+   WebSearch: "[topic] ecosystem all players [current year]"
+   WebSearch: "complete list [topic] [current year]"
+   ```
+
+2. **Extract ALL Entities from Results:**
+   ```markdown
+   **Discovered (NOT in my training data):**
+   - [Entity 1]: Brief description from search
+   - [Entity 2]: Brief description from search
+
+   **Confirmed (matches my knowledge but updated):**
+   - [Entity A]: What's new
+   - [Entity B]: Still relevant
+   ```
+
+3. **Build Complete Picture:**
+   - Count total entities found
+   - Note which are new vs known
+   - Use discovered names in SCOPE and PLAN queries
+   - Flag unknown entities for deeper investigation
+
+### Example
+
+**Topic:** "Chinese open-source AI models"
+
+**Landscape Scan Queries (CORRECT):**
+```
+"China open source AI models complete list 2025"
+"Chinese AI ecosystem all players 2025"
+"top Chinese LLM image video models 2025"
+```
+
+**NOT This (WRONG - uses known names):**
+```
+"DeepSeek vs Qwen comparison 2025" ← Skip this until AFTER scan!
+```
+
+**After Landscape Scan:**
+```
+Discovered: Wan 2.1, Kolors 2.1, MiniCPM4, Qwen3,
+           DeepSeek-V3.2, HunyuanVideo-I2V, Step-2, Emu3
+Confirmed: DeepSeek, Qwen, Yi, Baichuan, GLM
+```
+
+→ NOW you have complete picture for SCOPE
+
+### Anti-Patterns
+
+| Wrong | Right |
+|-------|-------|
+| Use known entity names in scan queries | Search for "list", "all", "ecosystem" |
+| Skip scan, assume knowledge is current | Always scan landscape first |
+| Search for specific comparisons first | Map the territory before drilling down |
+| Ignore unfamiliar names in results | Extract and list every entity |
+
+**Gate**: Complete entity list extracted; landscape mapped before SCOPE.
 
 ---
 

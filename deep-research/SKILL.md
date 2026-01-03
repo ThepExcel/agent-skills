@@ -11,10 +11,26 @@ Enhanced research engine for topics where training data is outdated.
 
 ### Standard Mode
 ```
-CLASSIFY → SCOPE → HYPOTHESIZE → PLAN → [PLAN PREVIEW*] → RETRIEVE
+CLASSIFY → LANDSCAPE SCAN → SCOPE → HYPOTHESIZE → PLAN → [PLAN PREVIEW*] → RETRIEVE
 → GAP ANALYSIS → TRIANGULATE → SYNTHESIZE → RED TEAM → SELF-CRITIQUE → PACKAGE
 ```
 *Deep+ tier only
+
+### LANDSCAPE SCAN (MANDATORY - Before Anything Else)
+```
+[Search for OVERVIEW first - NO known entity names in query!]
+WebSearch: "[topic] landscape overview [current year]"
+WebSearch: "top [topic] list [current year]"
+WebSearch: "[topic] ecosystem players [current year]"
+
+❌ WRONG: "DeepSeek Qwen performance 2025" (uses names you already know)
+✅ RIGHT: "China open source LLM models list 2025" (discovers what exists)
+
+→ Extract ALL entity names from results
+→ List: Discovered (new to you) vs Confirmed (you knew)
+→ THEN proceed to SCOPE with complete picture
+```
+**Why:** You cannot research what you don't know exists. Scan the landscape FIRST.
 
 ### Creative Mode
 ```
@@ -96,6 +112,19 @@ curl -s --max-time 60 "https://r.jina.ai/https://example.com"
 | Script | Purpose |
 |--------|---------|
 | `scripts/validate_report.py` | 9-check quality validation |
+
+## Output File (MANDATORY)
+
+After completing research, **ALWAYS save to markdown file**:
+
+```
+research/[topic-slug]-[YYYY-MM-DD].md
+```
+
+**Example:** `research/china-opensource-ai-2025-01-04.md`
+
+- Create `research/` folder if it doesn't exist
+- **Why:** Research takes effort. Save it for future reference.
 
 ## Related Skills
 
