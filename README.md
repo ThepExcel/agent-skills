@@ -57,14 +57,28 @@ After installation, Claude Code will automatically use these skills when relevan
 
 ### For Claude.ai (Web)
 
-1. Download the skill folder you want (e.g., `deep-research/`)
-2. **ZIP the entire folder** (not just the files inside!)
-   ```bash
-   # Correct way - ZIP the folder
-   zip -r deep-research.zip deep-research/
-   ```
-3. Go to **Settings > Capabilities** in Claude.ai
-4. Scroll down to **Skills** section and click **Upload skill**
+**Step 1: Download the skill folder**
+
+Choose one of these methods:
+
+| Method | How |
+|--------|-----|
+| **Download entire repo** | Click green **Code** button → **Download ZIP** → Extract → Find the skill folder you want |
+| **Use download tool** | Go to [download-directory.github.io](https://download-directory.github.io/) → Paste folder URL (e.g., `https://github.com/ThepExcel/claude-skills/tree/main/deep-research`) |
+| **Git clone** | `git clone https://github.com/ThepExcel/claude-skills.git` → Copy the folder you want |
+
+**Step 2: ZIP the folder**
+
+```bash
+# ZIP the entire folder (not just the files inside!)
+zip -r deep-research.zip deep-research/
+```
+
+**Step 3: Upload to Claude.ai**
+
+1. Go to **Settings > Capabilities**
+2. Scroll down to **Skills** section
+3. Click **Upload skill** and select your ZIP file
 
 > **Important:** ZIP must contain the folder structure. If you ZIP only the files, Claude won't find SKILL.md!
 >
