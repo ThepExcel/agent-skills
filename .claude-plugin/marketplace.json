@@ -10,8 +10,18 @@
   },
   "plugins": [
     {
-      "name": "research-skills",
-      "description": "Research and learning skills including deep research with source verification and concept explanation",
+      "name": "excel-skills",
+      "description": "Excel and Power Query skills for spreadsheet creation, formulas, formatting, and data transformation coaching",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/xlsx",
+        "./skills/power-query-coaching"
+      ]
+    },
+    {
+      "name": "research-education-skills",
+      "description": "Research and education skills for deep research with source verification and concept explanation",
       "source": "./",
       "strict": false,
       "skills": [
@@ -20,7 +30,7 @@
       ]
     },
     {
-      "name": "problem-solving-skills",
+      "name": "innovation-skills",
       "description": "Problem-solving and innovation skills including systematic analysis, TRIZ methodology, and creative ideation",
       "source": "./",
       "strict": false,
@@ -41,30 +51,37 @@
       ]
     },
     {
-      "name": "ai-prompt-skills",
-      "description": "AI and prompt engineering skills including prompt optimization, image/video prompts, skill creation, and expertise extraction",
+      "name": "prompt-engineering",
+      "description": "Prompt engineering skills for optimizing AI prompts and creating professional image/video prompts",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/optimize-prompt",
-        "./skills/prompt-ai-image-video",
+        "./skills/prompt-ai-image-video"
+      ]
+    },
+    {
+      "name": "skill-building",
+      "description": "Skills for creating Claude skills and extracting domain expertise from experts",
+      "source": "./",
+      "strict": false,
+      "skills": [
         "./skills/skill-creator",
         "./skills/extract-expertise"
       ]
     },
     {
       "name": "visualization-skills",
-      "description": "Data visualization and transformation skills including diagrams, animations, and Power Query coaching",
+      "description": "Data visualization skills for creating diagrams, charts, and Manim animations (3Blue1Brown-style)",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/create-visualization",
-        "./skills/power-query-coaching"
+        "./skills/create-visualization"
       ]
     },
     {
       "name": "document-skills",
-      "description": "Office document processing skills including Excel, Word, PowerPoint, and PDF capabilities",
+      "description": "Office document skills including Excel, Word, PowerPoint, and PDF capabilities",
       "source": "./",
       "strict": false,
       "skills": [

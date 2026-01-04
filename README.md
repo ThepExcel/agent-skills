@@ -19,8 +19,8 @@ The easiest way to install skills. Add this marketplace once, then install any s
 /plugin marketplace add ThepExcel/claude-skills
 
 # Step 2: Install the skills you want
-/plugin install research-skills@thepexcel-skills -s project
-/plugin install problem-solving-skills@thepexcel-skills -s project
+/plugin install excel-skills@thepexcel-skills -s project
+/plugin install innovation-skills@thepexcel-skills -s project
 /plugin install document-skills@thepexcel-skills -s project
 ```
 
@@ -28,12 +28,16 @@ The easiest way to install skills. Add this marketplace once, then install any s
 
 | Bundle | Skills Included |
 |--------|-----------------|
-| `research-skills` | deep-research, explain-concepts |
-| `problem-solving-skills` | problem-solving, triz, generate-creative-ideas |
+| `excel-skills` | xlsx, power-query-coaching |
+| `research-education-skills` | deep-research, explain-concepts |
+| `innovation-skills` | problem-solving, triz, generate-creative-ideas |
 | `business-skills` | design-business-model, manage-business-strategy |
-| `ai-prompt-skills` | optimize-prompt, prompt-ai-image-video, skill-creator, extract-expertise |
-| `visualization-skills` | create-visualization, power-query-coaching |
+| `prompt-engineering` | optimize-prompt, prompt-ai-image-video |
+| `skill-building` | skill-creator, extract-expertise |
+| `visualization-skills` | create-visualization |
 | `document-skills` | xlsx, docx, pptx, pdf |
+
+> **Note:** `xlsx` appears in both `excel-skills` and `document-skills` - install whichever fits your needs.
 
 **Installation scopes:**
 
@@ -48,7 +52,7 @@ The easiest way to install skills. Add this marketplace once, then install any s
 ```bash
 /plugin list thepexcel-skills              # List all available skills
 /plugin marketplace update thepexcel-skills # Update to latest version
-/plugin uninstall research-skills@thepexcel-skills
+/plugin uninstall excel-skills@thepexcel-skills
 ```
 
 #### Method 2: Manual Clone + Symlink
