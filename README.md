@@ -26,14 +26,23 @@ Skills are organized into bundles by domain:
 | `prompt-engineering` | optimize-prompt, prompt-ai-image-video | AI prompt optimization |
 | `skill-building` | skill-creator, extract-expertise | Create your own skills |
 | `visualization-skills` | create-visualization | Diagrams and animations |
-| `document-skills` | xlsx, docx, pptx, pdf | Office documents |
+| `document-skills` | docx, pptx, pdf | Office documents |
 
-> **Note:** `xlsx` appears in both `excel-skills` and `document-skills` - install whichever fits your needs.
+> **Note:** Document skills (docx, xlsx, pptx, pdf) are from [Anthropic Official](https://github.com/anthropics/skills)
 
-# Skill Sets
+# Repository Structure
 
-- [./skills](./skills): All available skills
-- [./skills/xlsx](./skills/xlsx), [./skills/docx](./skills/docx), [./skills/pptx](./skills/pptx), [./skills/pdf](./skills/pdf): Document skills (from [Anthropic Official](https://github.com/anthropics/skills))
+```
+bundles/
+├── excel-skills/skills/         # xlsx, power-query-coaching
+├── research-education-skills/   # deep-research, explain-concepts
+├── innovation-skills/           # problem-solving, triz, generate-creative-ideas
+├── business-skills/             # design-business-model, manage-business-strategy
+├── prompt-engineering/          # optimize-prompt, prompt-ai-image-video
+├── skill-building/              # skill-creator, extract-expertise
+├── visualization-skills/        # create-visualization
+└── document-skills/             # docx, pptx, pdf
+```
 
 # Try in Claude Code, Claude.ai, and the API
 
@@ -70,7 +79,7 @@ Then install skill bundles:
 
 ## Claude.ai
 
-1. Download a skill folder from [./skills](./skills)
+1. Download a skill folder from `bundles/*/skills/`
 2. ZIP the folder (must contain SKILL.md)
 3. Go to **Settings > Capabilities > Skills**
 4. Click **Upload skill** and select your ZIP file
@@ -87,9 +96,9 @@ cd claude-skills
 
 # Symlink to ~/.claude/skills/
 mkdir -p ~/.claude/skills
-for skill in skills/*/; do
-    skill_name=$(basename "$skill")
-    ln -sf "$(pwd)/$skill" ~/.claude/skills/$skill_name
+for bundle in bundles/*/skills/*/; do
+    skill_name=$(basename "$bundle")
+    ln -sf "$(pwd)/$bundle" ~/.claude/skills/$skill_name
 done
 ```
 

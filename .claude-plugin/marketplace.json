@@ -6,13 +6,13 @@
   },
   "metadata": {
     "description": "Thai AI/Excel/Power BI learning skills by ThepExcel.com - Curated collection of productivity, research, and creative skills",
-    "version": "1.0.1"
+    "version": "2.0.0"
   },
   "plugins": [
     {
       "name": "excel-skills",
       "description": "Excel and Power Query skills for spreadsheet creation, formulas, formatting, and data transformation coaching",
-      "source": "./",
+      "source": "./bundles/excel-skills",
       "strict": true,
       "skills": [
         "./skills/xlsx",
@@ -22,7 +22,7 @@
     {
       "name": "research-education-skills",
       "description": "Research and education skills for deep research with source verification and concept explanation",
-      "source": "./",
+      "source": "./bundles/research-education-skills",
       "strict": true,
       "skills": [
         "./skills/deep-research",
@@ -32,7 +32,7 @@
     {
       "name": "innovation-skills",
       "description": "Problem-solving and innovation skills including systematic analysis, TRIZ methodology, and creative ideation",
-      "source": "./",
+      "source": "./bundles/innovation-skills",
       "strict": true,
       "skills": [
         "./skills/problem-solving",
@@ -43,7 +43,7 @@
     {
       "name": "business-skills",
       "description": "Business strategy and model design skills including canvas frameworks and strategic analysis",
-      "source": "./",
+      "source": "./bundles/business-skills",
       "strict": true,
       "skills": [
         "./skills/design-business-model",
@@ -53,7 +53,7 @@
     {
       "name": "prompt-engineering",
       "description": "Prompt engineering skills for optimizing AI prompts and creating professional image/video prompts",
-      "source": "./",
+      "source": "./bundles/prompt-engineering",
       "strict": true,
       "skills": [
         "./skills/optimize-prompt",
@@ -63,7 +63,7 @@
     {
       "name": "skill-building",
       "description": "Skills for creating Claude skills and extracting domain expertise from experts",
-      "source": "./",
+      "source": "./bundles/skill-building",
       "strict": true,
       "skills": [
         "./skills/skill-creator",
@@ -73,7 +73,7 @@
     {
       "name": "visualization-skills",
       "description": "Data visualization skills for creating diagrams, charts, and Manim animations (3Blue1Brown-style)",
-      "source": "./",
+      "source": "./bundles/visualization-skills",
       "strict": true,
       "skills": [
         "./skills/create-visualization"
@@ -81,11 +81,10 @@
     },
     {
       "name": "document-skills",
-      "description": "Office document skills including Excel, Word, PowerPoint, and PDF capabilities",
-      "source": "./",
+      "description": "Office document skills including Word, PowerPoint, and PDF capabilities",
+      "source": "./bundles/document-skills",
       "strict": true,
       "skills": [
-        "./skills/xlsx",
         "./skills/docx",
         "./skills/pptx",
         "./skills/pdf"
