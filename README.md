@@ -1,6 +1,8 @@
-# Claude Skills & Plugins Guide
+# Agent Skills
 
-A comprehensive collection of skills for Claude Code, plus a complete reference for AI agents to understand Claude Code's architecture.
+A model-agnostic collection of skills for AI coding agents. Works with Claude Code, Cursor, Windsurf, and other AI-powered tools.
+
+**See also:** [agentskills.io](https://agentskills.io/) - The community hub for AI agent skills
 
 **Author:** [ThepExcel](https://www.thepexcel.com) • **License:** MIT
 
@@ -24,24 +26,24 @@ Clone this repo and symlink to make skills available:
 
 **User-level (all projects):**
 ```bash
-git clone https://github.com/ThepExcel/claude-skills.git ~/claude-skills
+git clone https://github.com/ThepExcel/agent-skills.git ~/agent-skills
 
 # Symlink individual skills
-ln -s ~/claude-skills/deep-research ~/.claude/skills/deep-research
-ln -s ~/claude-skills/triz ~/.claude/skills/triz
+ln -s ~/agent-skills/deep-research ~/.claude/skills/deep-research
+ln -s ~/agent-skills/triz ~/.claude/skills/triz
 # ... or symlink all
-for skill in ~/claude-skills/*/; do
+for skill in ~/agent-skills/*/; do
   ln -s "$skill" ~/.claude/skills/$(basename "$skill")
 done
 ```
 
 **Project-level (current project only):**
 ```bash
-git clone https://github.com/ThepExcel/claude-skills.git
+git clone https://github.com/ThepExcel/agent-skills.git
 
 # Symlink to project
 mkdir -p .claude/skills
-ln -s "$(pwd)/claude-skills/deep-research" .claude/skills/deep-research
+ln -s "$(pwd)/agent-skills/deep-research" .claude/skills/deep-research
 ```
 
 ### Method 3: Single Skill Only
@@ -50,17 +52,17 @@ Clone, copy the skill you need, then delete the rest:
 
 **User-level:**
 ```bash
-git clone https://github.com/ThepExcel/claude-skills.git
-cp -r claude-skills/deep-research ~/.claude/skills/
-rm -rf claude-skills
+git clone https://github.com/ThepExcel/agent-skills.git
+cp -r agent-skills/deep-research ~/.claude/skills/
+rm -rf agent-skills
 ```
 
 **Project-level:**
 ```bash
-git clone https://github.com/ThepExcel/claude-skills.git
+git clone https://github.com/ThepExcel/agent-skills.git
 mkdir -p .claude/skills
-cp -r claude-skills/deep-research .claude/skills/
-rm -rf claude-skills
+cp -r agent-skills/deep-research .claude/skills/
+rm -rf agent-skills
 ```
 
 ### Installation Scopes
@@ -1077,10 +1079,10 @@ Isolate bash commands with filesystem and network restrictions:
 
 ## Repository Structure
 
-This repository (`claude-skills`) contains skills in a flat structure for easy cloning:
+This repository (`agent-skills`) contains skills in a flat structure for easy cloning:
 
 ```
-claude-skills/
+agent-skills/
 ├── deep-research/
 │   ├── SKILL.md
 │   ├── SOURCES.md
