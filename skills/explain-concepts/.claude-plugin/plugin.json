@@ -1,0 +1,9 @@
+{
+  "name": "explain-concepts",
+  "version": "1.0.0",
+  "description": "Explains difficult concepts using Feynman, Socratic, Cognitive Load, and Dual Coding methodologies",
+  "author": {
+    "name": "ThepExcel",
+    "email": "thepexcel@gmail.com"
+  }
+}

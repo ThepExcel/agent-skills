@@ -1,0 +1,9 @@
+{
+  "name": "power-query-coaching",
+  "version": "1.0.0",
+  "description": "Coaches users to transform messy data into clean formats using Power Query UI",
+  "author": {
+    "name": "ThepExcel",
+    "email": "thepexcel@gmail.com"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "deep-research",
+  "version": "1.0.0",
+  "description": "Web research with Graph-of-Thoughts, hypothesis testing, source triangulation, and claim verification",
+  "author": {
+    "name": "ThepExcel",
+    "email": "thepexcel@gmail.com"
+  }
+}

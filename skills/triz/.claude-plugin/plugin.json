@@ -1,0 +1,9 @@
+{
+  "name": "triz",
+  "version": "1.0.0",
+  "description": "TRIZ systematic innovation methodology for technical contradictions and inventive problem-solving",
+  "author": {
+    "name": "ThepExcel",
+    "email": "thepexcel@gmail.com"
+  }
+}

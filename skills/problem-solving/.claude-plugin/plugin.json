@@ -1,0 +1,9 @@
+{
+  "name": "problem-solving",
+  "version": "1.0.0",
+  "description": "Systematic problem-solving with Good Teacher mode, inspired by Polya's How to Solve It",
+  "author": {
+    "name": "ThepExcel",
+    "email": "thepexcel@gmail.com"
+  }
+}

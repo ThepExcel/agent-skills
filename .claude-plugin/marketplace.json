@@ -1,102 +1,103 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "claude-toolkit",
-  "version": "3.0.0",
-  "description": "Skills, commands, and resources for Claude Code - Curated by ThepExcel.com",
+  "version": "4.0.0",
+  "description": "Skills for Claude Code - Curated by ThepExcel.com",
   "owner": {
     "name": "ThepExcel",
     "email": "thepexcel@gmail.com"
   },
   "plugins": [
     {
-      "name": "research-skills",
-      "description": "Deep research with citations and concept explanation",
-      "source": "./",
+      "name": "create-visualization",
+      "description": "Creates diagrams and animations for STEM education using Matplotlib and Manim",
+      "source": "./skills/create-visualization",
       "category": "productivity",
-      "tags": ["research", "citations", "education"],
-      "skills": [
-        "./skills/deep-research",
-        "./skills/explain-concepts"
-      ]
+      "tags": ["visualization", "diagrams", "manim", "matplotlib"]
     },
     {
-      "name": "innovation-skills",
-      "description": "Problem-solving, TRIZ methodology, and creative ideation",
-      "source": "./",
+      "name": "deep-research",
+      "description": "Web research with Graph-of-Thoughts, hypothesis testing, source triangulation, and claim verification",
+      "source": "./skills/deep-research",
       "category": "productivity",
-      "tags": ["innovation", "problem-solving", "creativity", "triz"],
-      "skills": [
-        "./skills/problem-solving",
-        "./skills/triz",
-        "./skills/generate-creative-ideas"
-      ]
+      "tags": ["research", "citations", "analysis"]
     },
     {
-      "name": "business-skills",
-      "description": "Business model design and strategic analysis frameworks",
-      "source": "./",
+      "name": "design-business-model",
+      "description": "Business model design using Business Model Canvas, Lean Canvas, and Value Proposition Canvas",
+      "source": "./skills/design-business-model",
       "category": "productivity",
-      "tags": ["business", "strategy", "canvas"],
-      "skills": [
-        "./skills/design-business-model",
-        "./skills/manage-business-strategy"
-      ]
+      "tags": ["business", "canvas", "startup"]
     },
     {
-      "name": "document-skills",
-      "description": "Office document creation: Excel, Word, PowerPoint, PDF",
-      "source": "./",
+      "name": "explain-concepts",
+      "description": "Explains difficult concepts using Feynman, Socratic, Cognitive Load, and Dual Coding methodologies",
+      "source": "./skills/explain-concepts",
       "category": "productivity",
-      "tags": ["documents", "office", "excel", "word"],
-      "skills": [
-        "./skills/xlsx",
-        "./skills/docx",
-        "./skills/pptx",
-        "./skills/pdf"
-      ]
+      "tags": ["education", "teaching", "learning"]
     },
     {
-      "name": "excel-skills",
-      "description": "Excel spreadsheets and Power Query data transformation",
-      "source": "./",
+      "name": "extract-expertise",
+      "description": "Extracts expertise from domain experts and transforms it into working Claude skills",
+      "source": "./skills/extract-expertise",
       "category": "development",
-      "tags": ["excel", "power-query", "data"],
-      "skills": [
-        "./skills/xlsx",
-        "./skills/power-query-coaching"
-      ]
+      "tags": ["skills", "expertise", "knowledge"]
     },
     {
-      "name": "prompt-skills",
-      "description": "Prompt engineering and AI image/video prompt creation",
-      "source": "./",
-      "category": "development",
-      "tags": ["prompts", "ai", "image-generation"],
-      "skills": [
-        "./skills/optimize-prompt",
-        "./skills/prompt-ai-image-video"
-      ]
-    },
-    {
-      "name": "skill-building",
-      "description": "Create Claude skills and extract domain expertise",
-      "source": "./",
-      "category": "development",
-      "tags": ["skills", "expertise", "knowledge"],
-      "skills": [
-        "./skills/skill-creator",
-        "./skills/extract-expertise"
-      ]
-    },
-    {
-      "name": "visualization-skills",
-      "description": "Data visualization, diagrams, and Manim animations",
-      "source": "./",
+      "name": "generate-creative-ideas",
+      "description": "Creative problem-solving using SCAMPER, First Principles, Random Word, and AI-optimized techniques",
+      "source": "./skills/generate-creative-ideas",
       "category": "productivity",
-      "tags": ["visualization", "diagrams", "manim", "3blue1brown"],
-      "skills": [
-        "./skills/create-visualization"
-      ]
+      "tags": ["creativity", "ideation", "brainstorming"]
+    },
+    {
+      "name": "manage-business-strategy",
+      "description": "Business management frameworks for strategic analysis, decision making, and growth strategy",
+      "source": "./skills/manage-business-strategy",
+      "category": "productivity",
+      "tags": ["business", "strategy", "management"]
+    },
+    {
+      "name": "optimize-prompt",
+      "description": "Prompt optimization for Claude API, OpenAI API, Gemini API, CLAUDE.md, ChatGPT, and n8n",
+      "source": "./skills/optimize-prompt",
+      "category": "development",
+      "tags": ["prompts", "ai", "optimization"]
+    },
+    {
+      "name": "power-query-coaching",
+      "description": "Coaches users to transform messy data into clean formats using Power Query UI",
+      "source": "./skills/power-query-coaching",
+      "category": "development",
+      "tags": ["excel", "power-query", "data"]
+    },
+    {
+      "name": "problem-solving",
+      "description": "Systematic problem-solving with Good Teacher mode, inspired by Polya's How to Solve It",
+      "source": "./skills/problem-solving",
+      "category": "productivity",
+      "tags": ["problem-solving", "thinking", "methodology"]
+    },
+    {
+      "name": "prompt-ai-image-video",
+      "description": "Creates professional AI image/video prompts with artist's eye for composition and lighting",
+      "source": "./skills/prompt-ai-image-video",
+      "category": "development",
+      "tags": ["ai", "image-generation", "video"]
+    },
+    {
+      "name": "skill-creator",
+      "description": "Guide for creating effective Claude skills with specialized knowledge and workflows",
+      "source": "./skills/skill-creator-thepexcel",
+      "category": "development",
+      "tags": ["skills", "development", "claude"]
+    },
+    {
+      "name": "triz",
+      "description": "TRIZ systematic innovation methodology for technical contradictions and inventive problem-solving",
+      "source": "./skills/triz",
+      "category": "productivity",
+      "tags": ["innovation", "triz", "engineering"]
     }
   ]
 }
