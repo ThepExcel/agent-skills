@@ -61,9 +61,18 @@ ln -s "$(pwd)/claude-skills/deep-research" .claude/skills/deep-research
 
 Clone, copy the skill you need, then delete the rest:
 
+**User-level:**
 ```bash
 git clone https://github.com/ThepExcel/claude-skills.git
 cp -r claude-skills/deep-research ~/.claude/skills/
+rm -rf claude-skills
+```
+
+**Project-level:**
+```bash
+git clone https://github.com/ThepExcel/claude-skills.git
+mkdir -p .claude/skills
+cp -r claude-skills/deep-research .claude/skills/
 rm -rf claude-skills
 ```
 
