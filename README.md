@@ -1046,16 +1046,46 @@ To use them, install from the official marketplace:
 
 ### Manual Installation
 
-```bash
-git clone https://github.com/ThepExcel/claude-toolkit.git
-cd claude-toolkit
+#### Option 1: Install All Skills
 
-# Symlink skills to user scope
+```bash
+# Clone the repository
+git clone https://github.com/ThepExcel/claude-toolkit.git
+
+# Copy to user scope (available in all projects)
 mkdir -p ~/.claude/skills
-for skill in skills/*/; do
-    ln -sf "$(pwd)/$skill" ~/.claude/skills/$(basename "$skill")
-done
+cp -r claude-toolkit/skills/* ~/.claude/skills/
+
+# Or copy to project scope (current project only)
+mkdir -p .claude/skills
+cp -r claude-toolkit/skills/* .claude/skills/
+
+# Clean up
+rm -rf claude-toolkit
 ```
+
+#### Option 2: Install Specific Skills Only
+
+```bash
+# Clone the repository
+git clone https://github.com/ThepExcel/claude-toolkit.git
+
+# Copy specific skill to user scope
+mkdir -p ~/.claude/skills
+cp -r claude-toolkit/skills/deep-research ~/.claude/skills/
+
+# Or copy to project scope
+mkdir -p .claude/skills
+cp -r claude-toolkit/skills/deep-research .claude/skills/
+
+# Clean up
+rm -rf claude-toolkit
+```
+
+| Scope | Location | Availability |
+|-------|----------|--------------|
+| User | `~/.claude/skills/` | All projects |
+| Project | `.claude/skills/` | Current project only |
 
 ### Claude.ai
 
