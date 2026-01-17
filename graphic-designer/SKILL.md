@@ -23,7 +23,96 @@ Create effective visual communication through research-backed design principles.
 7. ELEMENTS  — Add graphics, icons, photos
 8. REFINE    — Remove until it breaks, then add back
 9. CHECK     — Squint test, mobile test, contrast check
+10. REVIEW   — Self-critique and iterate (optional loop)
 ```
+
+---
+
+## Self-Review Loop (Auto-Improvement)
+
+เมื่อสร้างผลงานแล้ว สามารถเปิด loop วิเคราะห์และปรับปรุงอัตโนมัติได้
+
+### เมื่อไหร่ควรถาม User
+
+**ถาม user ก่อนเริ่ม loop:**
+> "ต้องการให้หนูเปิด Auto-Improvement Loop ไหมคะ? หนูจะวิเคราะห์ผลลัพธ์และปรับปรุงซ้ำจนกว่าจะได้คุณภาพที่ดีค่ะ"
+
+**Options:**
+1. **Quick Review** — 1 รอบวิเคราะห์ + แก้ไขถ้าจำเป็น
+2. **Full Loop** — วิเคราะห์ซ้ำจนกว่าจะผ่าน Quality Checklist ทุกข้อ
+3. **Skip** — ส่งมอบเลย ไม่ต้อง review
+
+### Review Loop Workflow
+
+```
+┌─────────────────────────────────────────────────────┐
+│  1. CREATE — สร้างผลงาน (slides, graphics, etc.)    │
+└─────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────┐
+│  2. ANALYZE — วิเคราะห์โครงสร้าง                    │
+│     • อ่าน XML/code ที่สร้าง                        │
+│     • ตรวจสอบ positions, sizes, colors             │
+│     • สร้าง thumbnails (ถ้าเป็น PPTX)              │
+└─────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────┐
+│  3. CRITIQUE — วิจารณ์ตาม Design Principles         │
+│     ใช้ Review Checklist (ด้านล่าง)                 │
+└─────────────────────────────────────────────────────┘
+                          ↓
+              ┌───────────────────┐
+              │  ผ่านทุกข้อ?      │
+              └───────────────────┘
+               ↙ NO          YES ↘
+┌──────────────────┐      ┌──────────────────┐
+│  4. FIX          │      │  5. DELIVER      │
+│  แก้ไขปัญหา       │      │  ส่งมอบผลงาน     │
+│  ที่พบ           │      │                  │
+└──────────────────┘      └──────────────────┘
+          ↓
+    กลับไป Step 2
+    (max 3 iterations)
+```
+
+### Review Checklist (Score 0-10)
+
+| Category | Check | Weight |
+|----------|-------|--------|
+| **Hierarchy** | #1 element เด่นชัด 2x+ กว่าที่เหลือ? | High |
+| **Contrast** | WCAG AA (4.5:1)? | High |
+| **Alignment** | Elements align to grid? | Medium |
+| **White Space** | ≥20% empty space? | Medium |
+| **Color Count** | ≤4 colors? | Medium |
+| **Font Count** | ≤2 fonts? | Low |
+| **Visual Impact** | มี focal point ที่ดึงดูดสายตา? | High |
+| **Brand Consistency** | ตรงกับ brand guidelines? | High |
+
+**Pass threshold:** Average ≥ 7/10 และไม่มี High-weight items ต่ำกว่า 6
+
+### Visual Impact Boost
+
+ถ้า Visual Impact score ต่ำ สามารถใช้ skills เหล่านี้ช่วย:
+
+| Need | Skill | Use Case |
+|------|-------|----------|
+| **Hero images** | `/art-director` | Gen prompt สำหรับ AI image ที่มี composition ดี |
+| **Local image gen** | `/comfyui-user` | Gen รูปผ่าน ComfyUI server ในเครื่อง |
+| **Decorative elements** | `/geometric-elements` | สร้าง corners, lines, patterns |
+
+**Example integration:**
+```
+1. สร้าง slide แล้วพบว่า visual impact ต่ำ
+2. ใช้ /art-director สร้าง prompt สำหรับ background image
+3. ใช้ /comfyui-user gen รูป (หรือ cloud API)
+4. ใส่รูปใน slide แล้ว re-analyze
+```
+
+### Iteration Limits
+
+- **Max iterations:** 3 รอบ (ป้องกัน infinite loop)
+- **Stop early if:** User บอกให้หยุด หรือ score ไม่เพิ่มขึ้น 2 รอบติดต่อกัน
+- **Report:** สรุป changes ที่ทำในแต่ละ iteration
 
 ---
 
@@ -220,14 +309,35 @@ python scripts/generate.py corner-accent --color "#D4A84B" --size 150
 python scripts/generate.py line-divider --color "#D4A84B" --width 800
 ```
 
+### /art-director — Visual Impact (AI Image Prompts)
+
+เมื่อต้องการรูปที่มี composition และ visual impact ดี:
+
+```
+1. Invoke /art-director พร้อมบอก context (slide theme, mood, brand)
+2. ได้ prompt ที่พร้อมใช้กับ AI image generators
+3. Gen รูปผ่าน /comfyui-user หรือ cloud API
+```
+
+### /comfyui-user — Local Image Generation
+
+สำหรับ gen รูปในเครื่องผ่าน ComfyUI:
+
+```
+1. Invoke /comfyui-user พร้อมบอกว่าต้องการรูปแบบไหน
+2. เลือก workflow (turbo สำหรับ gen ใหม่, edit สำหรับแก้รูปเดิม)
+3. ได้รูปพร้อมใช้ใน slides
+```
+
 ### Related Skills
 
-| Need | Skill |
-|------|-------|
-| Decorative elements | `/geometric-elements` |
-| Photo/video prompts | `/art-director` |
-| PowerPoint slides | `/pptx` |
-| ThepExcel brand | `/thepexcel-brand-guidelines` |
+| Need | Skill | When to Use |
+|------|-------|-------------|
+| Decorative elements | `/geometric-elements` | corners, lines, patterns, shapes |
+| AI image prompts | `/art-director` | hero images, backgrounds ที่ต้องการ composition ดี |
+| Local image gen | `/comfyui-user` | gen รูปผ่าน ComfyUI server |
+| PowerPoint slides | `/pptx` | สร้าง/แก้ไข PPTX files |
+| ThepExcel brand | `/thepexcel-brand-guidelines` | brand colors, fonts, logo usage |
 
 ---
 
