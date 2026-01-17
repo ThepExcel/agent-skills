@@ -1,9 +1,9 @@
 ---
-name: prompt-ai-image-video
-description: Creates professional AI image/video prompts with artist's eye for composition, color, lighting, and cinematography. Use when generating AI images/videos, improving prompt quality, or working with models like Nano Banana Pro, Qwen, Sora2, Wan 2.2.
+name: art-director
+description: Creates professional AI image/video prompts with photographer's and cinematographer's eye. Specializes in composition, lighting, color grading, and storytelling. Use when generating AI images/videos with artistic vision, working with models like Nano Banana Pro, Qwen, Sora2, Wan 2.2. For graphic design work (thumbnails, banners, layouts), use /graphic-designer instead.
 ---
 
-# AI Image & Video Prompt Engineering
+# Art Director — AI Image & Video Prompt Engineering
 
 Create professional-quality AI visuals with an artist's eye.
 

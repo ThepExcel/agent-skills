@@ -1,0 +1,9 @@
+{
+  "name": "art-director",
+  "version": "1.0.0",
+  "description": "Creates professional AI image/video prompts with photographer's and cinematographer's eye",
+  "author": {
+    "name": "ThepExcel",
+    "email": "thepexcel@gmail.com"
+  }
+}

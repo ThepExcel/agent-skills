@@ -1,0 +1,9 @@
+{
+  "name": "graphic-designer",
+  "version": "1.0.0",
+  "description": "Designs graphics for thumbnails, social media, banners using design principles",
+  "author": {
+    "name": "ThepExcel",
+    "email": "thepexcel@gmail.com"
+  }
+}
