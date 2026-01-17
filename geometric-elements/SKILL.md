@@ -13,12 +13,14 @@ Create decorative geometric elements with code using Pixie-python.
 # Install dependency (first time only)
 pip install pixie-python
 
-# Generate element
+# Generate element (ask user for brand color or check their brand guidelines)
 python .claude/skills/geometric-elements/scripts/generate.py corner-accent \
-  --color "#D4A84B" \
+  --color "#HEX_COLOR" \
   --size 200 \
   --output media/output/corner.png
 ```
+
+**Important:** Always ask user for brand colors or check their brand guidelines skill (e.g., `/thepexcel-brand-guidelines`) before generating.
 
 ## Available Elements
 
@@ -43,167 +45,77 @@ python .claude/skills/geometric-elements/scripts/generate.py corner-accent \
 | `--height` | Canvas height | 400 |
 | `--stroke` | Stroke width | 4 |
 | `--output` | Output file path | `output.png` |
-| `--gradient` | Gradient type: `linear`, `radial` | None |
-| `--opacity` | Opacity 0.0-1.0 | 1.0 |
+| `--gradient` | `linear` or `radial` | None |
+| `--opacity` | 0.0-1.0 | 1.0 |
+| `--fill` | Fill shape (vs stroke) | False |
 
 ## Examples
 
 ### Basic Shapes
 ```bash
 # Circle (stroke)
-python .claude/skills/geometric-elements/scripts/generate.py shape \
-  --style circle --color "#D4A84B" --size 100 --stroke 3 \
-  --output media/output/circle.png
+python scripts/generate.py shape --style circle --color "#HEX" --size 100 --stroke 3
 
 # Star (filled)
-python .claude/skills/geometric-elements/scripts/generate.py shape \
-  --style star --color "#D4A84B" --size 100 --sides 5 --fill \
-  --output media/output/star.png
+python scripts/generate.py shape --style star --color "#HEX" --size 100 --sides 5 --fill
 
-# Available styles: circle, ellipse, rectangle, square, rounded-rect,
-#   triangle, polygon, star, diamond, ring, cross, arrow, arrow-up,
-#   heart, hexagon, octagon, crescent
+# Available: circle, ellipse, rectangle, square, rounded-rect, triangle,
+#   polygon, star, diamond, ring, cross, arrow, heart, hexagon, octagon, crescent
 ```
 
-### Gold Corner Accent (ThepExcel Brand)
+### Corner Accent
 ```bash
-python .claude/skills/geometric-elements/scripts/generate.py corner-accent \
-  --color "#D4A84B" \
-  --size 150 \
-  --stroke 4 \
-  --output media/output/gold-corner.png
+python scripts/generate.py corner-accent --color "#HEX" --size 150 --stroke 4
 ```
 
 ### Gradient Line Divider
 ```bash
-python .claude/skills/geometric-elements/scripts/generate.py line-divider \
-  --color "#D4A84B" \
-  --color2 "#FFFFFF" \
-  --gradient linear \
-  --width 800 \
-  --stroke 3 \
-  --output media/output/divider.png
+python scripts/generate.py line-divider --color "#HEX" --color2 "#FFFFFF" --gradient linear --width 800
 ```
 
-### Arc with Radial Gradient
+### Mandala (Sacred Geometry)
 ```bash
-python .claude/skills/geometric-elements/scripts/generate.py arc-accent \
-  --color "#D4A84B" \
-  --gradient radial \
-  --size 200 \
-  --output media/output/arc.png
+python scripts/generate.py mandala --color "#CCC" --bg "#0A0A0A" --size 400 --rings 8 --layers 4 --stroke 1.5
 ```
 
-### Sacred Geometry Mandala
-```bash
-python .claude/skills/geometric-elements/scripts/generate.py mandala \
-  --color "#CCCCCC" \
-  --bg "#0A0A0A" \
-  --size 400 \
-  --stroke 1.5 \
-  --rings 8 \
-  --layers 4 \
-  --output media/output/mandala.png
-```
-
-## Element Details
-
-See [references/element-catalog.md](references/element-catalog.md) for:
-- Visual examples of each element type
-- Detailed parameter options
-- Design guidelines
-
-## Brand Colors (ThepExcel)
-
-| Name | Hex | Usage |
-|------|-----|-------|
-| Gold | `#D4A84B` | Primary accent |
-| Black | `#0A0A0A` | Text, contrast |
-| White | `#FFFFFF` | Background |
-| Light Gray | `#F5F5F5` | Subtle BG |
-
-## Tips
-
-1. **Transparent background**: All outputs have transparent background by default
-2. **High DPI**: Use `--size` 2x for retina displays
-3. **Gradients**: Combine `--gradient linear` with `--color` and `--color2`
-4. **Batch generation**: Script supports multiple outputs in one call
-
----
+→ More examples: [references/element-catalog.md](references/element-catalog.md)
 
 ## Custom Elements (On-the-fly)
 
-For complex or custom geometric patterns not covered by predefined commands, write Python code directly using pixie-python.
-
-### Quick Start
+For complex patterns not in predefined commands, write Python directly:
 
 ```python
 import pixie
 import math
 
-# Create canvas
 image = pixie.Image(400, 400)
-
-# Create paint
 paint = pixie.Paint(pixie.SOLID_PAINT)
-paint.color = pixie.Color(0.83, 0.66, 0.29, 1.0)  # Gold #D4A84B
+paint.color = pixie.Color(0.83, 0.66, 0.29, 1.0)  # RGB 0-1 range
 
-# Draw using context
 ctx = image.new_context()
 ctx.stroke_style = paint
 ctx.line_width = 2
 ctx.stroke_segment(50, 50, 350, 350)
 
-# Or using paths
-path = pixie.parse_path("M 100 100 L 300 100 L 200 300 Z")
-image.stroke_path(path, paint, pixie.Matrix3(), 2)
-
-# Save
 image.write_file("output.png")
 ```
 
-### When to Use Custom Code
-
-- Complex sacred geometry / mandalas
-- Spirograph / mathematical curves
-- Unique patterns not in predefined commands
-- Animated sequences (generate frames)
-
-### API Reference
-
-See [references/pixie-api.md](references/pixie-api.md) for:
-- Color & gradient setup
-- Path commands (SVG-style)
-- Common patterns (polygons, arcs, beziers)
-- Full working examples
-
----
+→ Full API: [references/pixie-api.md](references/pixie-api.md)
 
 ## From Reference Image
 
-User สามารถส่ง reference image มาให้ Claude วิเคราะห์และสร้างตามได้
+User can send reference images for Claude to analyze and recreate:
 
-### Workflow
+1. **User sends image** — screenshot, design reference, pattern
+2. **Claude analyzes** — identifies shapes, colors, proportions
+3. **Claude writes code** — using pixie-python API
+4. **Output** — PNG ready to use
 
-1. **User ส่งรูป** — screenshot, design reference, หรือ pattern ที่ต้องการ
-2. **Claude วิเคราะห์** — ระบุ shapes, colors, proportions, layout
-3. **Claude เขียน code** — ใช้ pixie-python API สร้าง element ตาม reference
-4. **Output** — PNG พร้อมใช้งาน
+**Tips for good reference:** Clear image, geometric patterns (not photos), specify hex colors if needed.
 
-### Example Request
+## Tips
 
-```
-"สร้าง geometric pattern ตามรูปนี้" + [แนบรูป]
-```
-
-Claude จะ:
-- วิเคราะห์ว่ารูปมี circles, polygons, lines อะไรบ้าง
-- ประมาณสัดส่วน, ระยะห่าง, สี
-- เขียน Python code สร้างตาม
-- Run และ output PNG
-
-### Tips for Good Reference
-
-- **ชัด** — รูปไม่เบลอ เห็น detail
-- **Simple** — geometric patterns ทำได้ดี, realistic photos ยาก
-- **บอกสี** — ถ้าต้องการสีเฉพาะ บอก hex code
+1. **Transparent bg** — All outputs have transparent background by default
+2. **High DPI** — Use `--size` 2x for retina displays
+3. **Gradients** — Combine `--gradient linear` with `--color` and `--color2`
+4. **Brand colors** — Always confirm with user or their brand guidelines first

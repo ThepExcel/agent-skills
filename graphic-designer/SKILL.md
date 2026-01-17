@@ -7,62 +7,7 @@ description: Designs graphics for thumbnails, social media, banners, and present
 
 Create effective visual communication through research-backed design principles.
 
-## Core Philosophy
-
-**Design = Communication + Aesthetics**
-
-Good design is invisible — it guides the eye, conveys the message, and feels "right" without effort.
-
----
-
-## Design Principles
-
-### CRAP Principles (Foundation)
-
-| Principle | What | How |
-|-----------|------|-----|
-| **Contrast** | Make differences obvious | Size, color, weight, shape |
-| **Repetition** | Create consistency | Reuse colors, fonts, elements |
-| **Alignment** | Connect elements visually | Grid, edges, centers |
-| **Proximity** | Group related items | Spacing, containers |
-
-**Key Insight:** Proximity is the most powerful grouping tool — it overrides color and shape cues.
-
-### Gestalt Principles (Psychology-Based)
-
-| Principle | Description | Application |
-|-----------|-------------|-------------|
-| **Proximity** | Close items = same group | Group related content together |
-| **Similarity** | Similar items = related | Consistent styling for related elements |
-| **Closure** | Brain completes incomplete shapes | Logo design (WWF panda effect) |
-| **Figure-Ground** | Foreground vs background | Clear focal points |
-| **Continuity** | Eye follows smooth lines | Guide attention with visual flow |
-
-### Visual Hierarchy (Eye Tracking Research)
-
-**F-Pattern** (text-heavy content):
-```
-███████████████████  ← First horizontal scan
-███████████████████
-████████              ← Second scan (shorter)
-████████
-████                  ← Vertical scan down left
-████
-```
-
-**Z-Pattern** (visual content):
-```
-1 ─────────────→ 2
-        ↘
-3 ─────────────→ 4
-```
-
-**Hierarchy Techniques (order of impact):**
-1. **Size** — Larger = more important
-2. **Color/Contrast** — Bright catches eye first
-3. **Position** — Top-left gets attention first (Western)
-4. **White Space** — Isolation creates emphasis
-5. **Weight** — Bold stands out
+**Design = Communication + Aesthetics** — Good design is invisible: it guides the eye, conveys the message, and feels "right" without effort.
 
 ---
 
@@ -82,6 +27,36 @@ Good design is invisible — it guides the eye, conveys the message, and feels "
 
 ---
 
+## Design Principles (Summary)
+
+### CRAP Principles
+
+| Principle | What | How |
+|-----------|------|-----|
+| **Contrast** | Make differences obvious | Size, color, weight |
+| **Repetition** | Create consistency | Reuse colors, fonts |
+| **Alignment** | Connect visually | Grid, edges |
+| **Proximity** | Group related items | Spacing |
+
+→ Details: [references/gestalt.md](references/gestalt.md)
+
+### Visual Hierarchy (order of impact)
+
+1. **Size** — Larger = more important
+2. **Color/Contrast** — Bright catches eye first
+3. **Position** — Top-left (Western), top-right (RTL)
+4. **White Space** — Isolation creates emphasis
+5. **Weight** — Bold stands out
+
+### Reading Patterns
+
+| Pattern | Best For | Flow |
+|---------|----------|------|
+| **Z-Pattern** | Visual/marketing | Top-L → Top-R → Bottom-L → Bottom-R |
+| **F-Pattern** | Text-heavy | Horizontal scans + vertical down left |
+
+---
+
 ## Color System
 
 ### 60-30-10 Rule
@@ -92,20 +67,6 @@ Good design is invisible — it guides the eye, conveys the message, and feels "
 | 30% | Secondary | Containers, cards |
 | 10% | Accent | CTAs, highlights |
 
-### Color Psychology + Cultural Differences
-
-| Color | Western | Asian (China/Japan) | Use For |
-|-------|---------|---------------------|---------|
-| **Red** | Danger, urgency, passion | Luck, joy, prosperity | Sales (West), Celebrations (Asia) |
-| **White** | Pure, clean, minimal | Mourning, death | Backgrounds (West), Avoid for joy (Asia) |
-| **Blue** | Trust, calm, masculine | Feminine (China) | Corporate, tech |
-| **Yellow** | Optimism, attention | Sacred, divine | Highlights |
-| **Gold** | Premium, luxury | Prosperity, success | Premium brands |
-| **Black** | Power, elegance | Formal, serious | Luxury |
-| **Green** | Growth, nature, money | Youth, fertility | Health, eco |
-
-**Rule:** Research target audience culture before choosing colors!
-
 ### Quick Palettes
 
 | Mood | Colors |
@@ -114,39 +75,37 @@ Good design is invisible — it guides the eye, conveys the message, and feels "
 | Energetic | Orange + Black + White |
 | Calm | Blue + Light Gray + White |
 | Premium | Black + Gold + White |
-| Fresh | Green + White + Light Gray |
 | **2025 Trend** | Dark + Neon accent |
+
+### Cultural Color Meanings (Check First!)
+
+| Color | Western | East Asia | Thai Context |
+|-------|---------|-----------|--------------|
+| **Red** | Danger, urgency | Luck, joy | Auspicious |
+| **White** | Pure, clean | Mourning | Formal/Mourning |
+| **Yellow** | Optimism | Sacred | Royal |
+| **Gold** | Luxury | Prosperity | Premium |
+
+→ Full guide: [references/color-theory.md](references/color-theory.md)
 
 ### Accessibility (WCAG)
 
 | Standard | Normal Text | Large Text (18pt+) |
 |----------|-------------|-------------------|
-| **AA (Minimum)** | 4.5:1 contrast | 3:1 contrast |
-| **AAA (Enhanced)** | 7:1 contrast | 4.5:1 contrast |
+| **AA (Minimum)** | 4.5:1 | 3:1 |
+| **AAA (Enhanced)** | 7:1 | 4.5:1 |
 
-**Tools:** [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+Tool: [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
 
 ---
 
 ## Typography
 
-### Font Pairing Rules
+### Quick Rules
 
-1. **Contrast** — Pair serif with sans-serif
-2. **Limit** — Max 2-3 fonts total
-3. **Hierarchy via size** — Not font changes
-4. **Golden Ratio** — Next size = current × 1.618
-
-### Size Scale (Golden Ratio)
-
-| Element | Ratio | Example (16px base) |
-|---------|-------|---------------------|
-| Display | 3.8x | 61px |
-| H1 | 3x | 48px |
-| H2 | 2.4x | 39px |
-| H3 | 2x | 31px |
-| Body | 1x | 16px |
-| Caption | 0.75x | 12px |
+- **Max 2 fonts** — 1 display + 1 body
+- **Hierarchy via size** — Not font changes
+- **Line height** — 1.4-1.6 for body, 1.1-1.2 for headlines
 
 ### Safe Font Pairs
 
@@ -154,61 +113,37 @@ Good design is invisible — it guides the eye, conveys the message, and feels "
 |---------|------|------|
 | Montserrat Bold | Open Sans | Modern |
 | Playfair Display | Lato | Elegant |
-| Oswald | Source Serif | Professional |
-| Bebas Neue | Roboto | Bold |
 | **Kanit Bold** | **Sarabun** | Thai-friendly |
 
-### Thai Fonts (Google Fonts)
-
-| Font | Style | Best For |
-|------|-------|----------|
-| Kanit | Geometric, modern | Headlines, tech |
-| Sarabun | Official, readable | Body text |
-| Prompt | Clean, minimal | Tech, startups |
-| Bai Jamjuree | Friendly | Casual |
+→ Full guide: [references/typography.md](references/typography.md)
 
 ---
 
-## Layout & Composition
+## Layout
 
-### Grid System (8px Base)
+### 8px Spacing System
 
-```
-4px  — Tight (icons, inline)
-8px  — Small (within groups)
-16px — Medium (between elements)
-24px — Large (sections)
-32px — XL (major sections)
-48px — XXL (page margins)
-```
-
-### Golden Ratio (1:1.618)
-
-**Applications:**
-- Layout proportions: sidebar 38% : content 62%
-- Typography scale: body × 1.618 = heading
-- Image cropping
-- Logo design
-
-**Golden Spiral:** Place focal point at spiral center.
-
-### Rule of Thirds
-
-Divide into 3×3 grid. Place key elements at **intersections**.
-
-### White Space
-
-| Type | Use |
+| Size | Use |
 |------|-----|
-| **Macro** | Between sections |
-| **Micro** | Line height, letter spacing |
-| **Active** | Intentional emphasis |
+| 8px | Within groups |
+| 16px | Between elements |
+| 24-32px | Sections |
+| 48px | Page margins |
 
-**Research:** White space improves comprehension by ~20%.
+### Social Media Dimensions
+
+| Platform | Ratio | Size |
+|----------|-------|------|
+| YouTube Thumbnail | 16:9 | 1280×720 |
+| Instagram Post | 1:1 | 1080×1080 |
+| Instagram Story | 9:16 | 1080×1920 |
+| Facebook/LinkedIn | 1.91:1 | 1200×630 |
+
+→ Layout templates: [references/layouts.md](references/layouts.md)
 
 ---
 
-## Presentation Slide Design
+## Presentation Slides
 
 ### Core Rules
 
@@ -216,164 +151,29 @@ Divide into 3×3 grid. Place key elements at **intersections**.
 |------|-----------|
 | **One idea per slide** | Single focused message |
 | **Rule of 4** | Max 4 bullets, 4 words each |
-| **6×6 Rule** | Max 6 lines, 6 words per line |
 | **Don't compete** | Audience can't read AND listen |
 
-### Font Size Guidelines
+### Font Sizes
 
 | Context | Titles | Body | Captions |
 |---------|--------|------|----------|
-| **Live (large room)** | 60pt+ | 40pt+ | 24pt+ |
-| **Virtual/Screen** | 44pt+ | 32pt+ | 20pt+ |
-| **Leave-behind** | 36pt+ | 20pt+ | 12pt+ |
+| **Large room** | 60pt+ | 40pt+ | 24pt+ |
+| **Virtual** | 44pt+ | 32pt+ | 20pt+ |
 
-### 2025 Slide Trends
-
-| Trend | Description |
-|-------|-------------|
-| **Dark mode** | Dark bg + bright/neon text |
-| **Minimalism** | One bold accent color |
-| **Gradients** | Depth and creativity |
-| **Motion** | Micro-animations, kinetic type |
-| **Magazine layouts** | Asymmetric, layered |
-| **Mobile-first** | Design for phone viewing |
-
-### Slide Checklist
-
-- [ ] One idea per slide?
-- [ ] Text readable from back of room?
-- [ ] High contrast (4.5:1+)?
-- [ ] Visual > text for data?
-- [ ] Consistent styling?
+→ Full guide: [references/presentation-design.md](references/presentation-design.md)
 
 ---
 
-## YouTube Thumbnail Best Practices
+## YouTube Thumbnails
 
-### Research-Backed Tips
+| Element | Recommendation |
+|---------|----------------|
+| **Faces** | Use expressive faces (+20-30% CTR) |
+| **Text** | Minimal, bold, curiosity |
+| **Colors** | High contrast, 3-4 max |
+| **Mobile** | Readable at small size |
 
-| Element | Recommendation | Impact |
-|---------|----------------|--------|
-| **Faces** | Use expressive faces | +20-30% CTR |
-| **Background** | Blur or darken | Focus on subject |
-| **Text** | Minimal, bold, curiosity | Not summary |
-| **Colors** | High contrast, 3-4 max | Stand out |
-| **Mobile** | Readable at small size | 63% mobile traffic |
-
-### Recommended Fonts
-
-Impact, Anton, Montserrat Extra Bold, Bebas Neue
-
-### CTR Benchmarks
-
-| CTR | Rating |
-|-----|--------|
-| 2-3% | Average |
-| 4-6% | Good |
-| 10%+ | Excellent |
-
-**Fact:** 90% of top videos use custom thumbnails.
-
----
-
-## Layout Templates
-
-### Thumbnail (16:9) — 1280×720
-
-```
-┌─────────────────────────────┐
-│  [FACE]      BIG HEADLINE   │  ← Face 40%+ height
-│              ─────────────  │  ← Eye contact if possible
-│              small text     │  ← Blur background
-└─────────────────────────────┘
-```
-
-### Social Post (1:1) — 1080×1080
-
-```
-┌─────────────────┐
-│    HEADLINE     │
-│   ───────────   │
-│                 │
-│  [Visual/Icon]  │
-│                 │
-│  Call to Action │
-└─────────────────┘
-```
-
-### Social Dimensions
-
-| Platform | Ratio | Size |
-|----------|-------|------|
-| YouTube Thumbnail | 16:9 | 1280×720 |
-| Instagram Post | 1:1 | 1080×1080 |
-| Instagram Story | 9:16 | 1080×1920 |
-| Facebook Post | 1.91:1 | 1200×630 |
-| LinkedIn Post | 1.91:1 | 1200×627 |
-
----
-
-## Tools Integration
-
-### /geometric-elements — Decorative Assets
-
-```bash
-# Basic shapes
-python scripts/generate.py shape --style star --color "#D4A84B" --size 100 --fill
-
-# Corner decorations
-python scripts/generate.py corner-accent --color "#D4A84B" --size 150 --stroke 4
-
-# Line dividers
-python scripts/generate.py line-divider --color "#D4A84B" --width 800
-
-# Patterns
-python scripts/generate.py pattern --style dots --color "#D4A84B" --size 30
-
-# Mandala
-python scripts/generate.py mandala --color "#CCCCCC" --bg "#0A0A0A" --size 400
-```
-
-### AI Image Generation
-
-```bash
-# Nano Banana Pro (cloud)
-python tools/generate_image.py "prompt" -o media/output/image.png
-
-# ComfyUI (local) — Use /art-director for prompts
-```
-
-### Related Skills
-
-| Need | Skill |
-|------|-------|
-| Decorative elements | `/geometric-elements` |
-| Photo/video prompts | `/art-director` |
-| PowerPoint slides | `/pptx` |
-| ThepExcel brand | `/thepexcel-brand-guidelines` |
-| Creative ideas | `/generate-creative-ideas` |
-
----
-
-## Checklists
-
-### Before Designing
-
-- [ ] What's the ONE message?
-- [ ] Who's the audience? (culture, context)
-- [ ] What emotion should it evoke?
-- [ ] What device will they view on?
-
-### Quality Check
-
-- [ ] Clear hierarchy? (squint test)
-- [ ] Readable at target size?
-- [ ] Max 3-4 colors?
-- [ ] Max 2-3 fonts?
-- [ ] Aligned to grid?
-- [ ] Enough white space?
-- [ ] Contrast 4.5:1+? (WCAG AA)
-- [ ] CTA stands out?
+**Layout:** Face 40%+ height, eye contact, blur background
 
 ---
 
@@ -388,7 +188,46 @@ python tools/generate_image.py "prompt" -o media/output/image.png
 | Filled every space | Add 20% more white space |
 | Text on busy photo | Add overlay or blur |
 | Ignoring culture | Check color meanings |
-| Small slide text | 40pt+ for body |
+
+---
+
+## Checklists
+
+### Before Designing
+
+- [ ] What's the ONE message?
+- [ ] Who's the audience? (culture, device)
+- [ ] What emotion should it evoke?
+
+### Quality Check
+
+- [ ] Clear hierarchy? (squint test)
+- [ ] Readable at target size?
+- [ ] Max 3-4 colors, 2-3 fonts?
+- [ ] Contrast 4.5:1+? (WCAG AA)
+- [ ] Aligned to grid?
+- [ ] Enough white space?
+
+---
+
+## Tools Integration
+
+### /geometric-elements — Decorative Assets
+
+```bash
+python scripts/generate.py shape --style star --color "#D4A84B" --size 100
+python scripts/generate.py corner-accent --color "#D4A84B" --size 150
+python scripts/generate.py line-divider --color "#D4A84B" --width 800
+```
+
+### Related Skills
+
+| Need | Skill |
+|------|-------|
+| Decorative elements | `/geometric-elements` |
+| Photo/video prompts | `/art-director` |
+| PowerPoint slides | `/pptx` |
+| ThepExcel brand | `/thepexcel-brand-guidelines` |
 
 ---
 
@@ -399,5 +238,5 @@ python tools/generate_image.py "prompt" -o media/output/image.png
 | Color theory | [references/color-theory.md](references/color-theory.md) |
 | Typography | [references/typography.md](references/typography.md) |
 | Layouts | [references/layouts.md](references/layouts.md) |
-| **Presentation design** | [references/presentation-design.md](references/presentation-design.md) |
-| **Gestalt principles** | [references/gestalt.md](references/gestalt.md) |
+| Presentation design | [references/presentation-design.md](references/presentation-design.md) |
+| Gestalt principles | [references/gestalt.md](references/gestalt.md) |

@@ -130,16 +130,6 @@ python scripts/generate.py mandala --color "#FFFFFF" --bg "#1A1A2E" --size 500 -
 
 ---
 
-## Brand Colors Reference
-
-| Name | Hex | RGB |
-|------|-----|-----|
-| Gold | `#D4A84B` | rgb(212,168,75) |
-| Black | `#0A0A0A` | rgb(10,10,10) |
-| White | `#FFFFFF` | rgb(255,255,255) |
-| Light Gray | `#F5F5F5` | rgb(245,245,245) |
-| Dark Gray | `#4A4A4A` | rgb(74,74,74) |
-
 ## Tips
 
 1. **High DPI:** Use `--size` 2x for retina displays
